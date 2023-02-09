@@ -32,10 +32,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col h-96">
+    <div>
       {!isloading && (
-        <h1>
-          <div className="text-center justify-center font-bold p-5 text-xl bg-red-100 m-5 rounded-lg">
+        <h1 className=" w-96 mx-auto" >
+          <div className="text-center justify-center font-bold p-5 text-xl bg-red-200 m-5 rounded-lg">
             Image to Text
           </div>
         </h1>
@@ -50,11 +50,11 @@ export default function Home() {
 
       {!isloading && !text && (
         <>
-          <div className="flex justify-center ">
-            <div className="m-10">
+          <div className="flex justify-center w-auto">
+            <div className="m-8">
               <input
                 type="file"
-                className=" rounded-xl bg-blue-100 p-2 text-center"
+                className=" rounded-xl bg-green-200 p-2 text-center"
                 onChange={(e) =>
                   SetImage(URL.createObjectURL(e.target.files[0]))
                 }
